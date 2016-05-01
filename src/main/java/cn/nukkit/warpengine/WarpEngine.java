@@ -1,5 +1,6 @@
 package cn.nukkit.warpengine;
 
+import cn.nukkit.warpengine.utils.logging.SystemLogger;
 import org.fusesource.jansi.AnsiConsole;
 
 /**
@@ -42,7 +43,9 @@ public class WarpEngine {
     }
 
     private static void initialize() {
-        new Proxy();
+        SystemLogger systemLogger = new SystemLogger();
+        new Proxy(systemLogger);
+
     }
 
 }

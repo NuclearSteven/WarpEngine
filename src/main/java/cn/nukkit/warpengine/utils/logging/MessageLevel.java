@@ -14,8 +14,8 @@ public class MessageLevel {
     public static final MessageLevel FINEST = new MessageLevel("FINEST", 300);
     public static final MessageLevel ALL = new MessageLevel("ALL", Integer.MIN_VALUE);
 
-    private String LEVEL;
-    private int INTEGER_VALUE;
+    public final String LEVEL;
+    public final int INTEGER_VALUE;
 
     private MessageLevel(String level, int value) {
         this.LEVEL = level;
