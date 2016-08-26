@@ -1,10 +1,13 @@
 package cn.nukkit.warpengine;
 
+import org.fusesource.jansi.Ansi;
 import org.fusesource.jansi.AnsiConsole;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.*;
+
+import static org.fusesource.jansi.Ansi.ansi;
 
 /**
  * Project WarpEngine
@@ -49,17 +52,27 @@ public class WarpEngine {
         Logger logger = Logger.getLogger("WarpEngine");
         ConsoleHandler consoleHandler = new ConsoleHandler();
         consoleHandler.setFormatter(new Formatter() {
+
             @Override
             public String format(LogRecord record) {
                 Date date = new Date();
                 SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss");
-                return "[" + format.format(date) + " " + record.getLevel() + "]: " + formatMessage(record);
+
+                String color = null;
+                if (record.getLevel().intValue() > 800) {
+                    color = ansi().fg(Ansi.Color.RED).toString();
+                }
+                return "[" + format.format(date) + " " + record.getLevel() + "]: " + color + formatMessage(record);
             }
+
         });
+
         for (Handler iHandler : logger.getParent().getHandlers()) {
             logger.getParent().removeHandler(iHandler);
         }
         logger.addHandler(consoleHandler);
+
+
         new Proxy(logger);
     }
 

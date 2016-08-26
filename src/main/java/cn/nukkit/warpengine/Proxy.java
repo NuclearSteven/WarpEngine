@@ -7,8 +7,13 @@ import java.util.logging.Logger;
  */
 public class Proxy {
 
+    private static Proxy instance;
+
+    private Logger logger;
+
     public Proxy(Logger systemLogger) {
-        systemLogger.info("Test");
+        instance = this;
+        this.logger = systemLogger;
     }
 
 }
