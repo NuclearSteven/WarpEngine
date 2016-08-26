@@ -1,14 +1,14 @@
 package cn.nukkit.warpengine;
 
-import cn.nukkit.warpengine.utils.logging.SystemLogger;
+import java.util.logging.Logger;
 
 /**
  * Project WarpEngine
  */
 public class Proxy {
 
-    public Proxy(SystemLogger systemLogger) {
-
+    public Proxy(Logger systemLogger) {
+        systemLogger.info("Test");
     }
 
 }
