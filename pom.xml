@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.nukkit.warpengine</groupId>
-    <artifactId>warpengine</artifactId>
+    <artifactId>WarpEngine</artifactId>
     <version>0.1-DEVELOPMENT</version>
 
     <properties>
@@ -19,7 +19,11 @@
             <artifactId>jansi</artifactId>
             <version>1.11</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.11</version>
+        </dependency>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
