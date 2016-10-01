@@ -14,8 +14,8 @@ import static org.fusesource.jansi.Ansi.ansi;
  */
 public class WarpEngine {
 
-    public final static String MINECRAFT_VERSION = "v0.14.2 alpha";
-    public final static String MINECRAFT_VERSION_NETWORK = "0.14.2";
+    public final static String MINECRAFT_VERSION = "v0.15.9 alpha";
+    public final static String MINECRAFT_VERSION_NETWORK = "0.15.9";
     public final static String WARPENGINE_VERSION = "0.1-DEVELOPMENT";
     public final static String CODENAME = "Eureka";
     public static boolean ANSI = true;
